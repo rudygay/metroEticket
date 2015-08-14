@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_gravity="center_vertical" android:background="@drawable/about_us" android:layout_width="fill_parent" android:layout_height="45.0dip">
+        <ImageView
+            android:layout_width="22.0dip"
+            android:layout_height="22.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5.0dip"
+            android:src="@drawable/back"
+            android:onClick="back"/>
+        <TextView android:textSize="20.0sp" android:textColor="#ffffffff" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="70.0dip" android:layout_marginRight="70.0dip" android:text="帮助" android:layout_centerInParent="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10.0dip"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip"
+        android:layout_marginTop="10.0dip"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <LinearLayout android:showDividers="end" android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        	<ImageView
+        	    android:layout_width="176.0dip"
+        	    android:layout_height="74.0dip"
+        	    android:layout_gravity="center_horizontal"
+        	    android:src="@drawable/metrogo" />
+            <TextView android:layout_gravity="center_horizontal" android:textSize="13.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="10.0dip" android:text="MetroGO"/>
+        </LinearLayout>
+        <LinearLayout android:showDividers="end" android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView 
+                android:textSize="13.0sp" 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content" 
+                android:layout_marginLeft="5dip" 
+                android:layout_marginTop="5dip" 
+                android:layout_marginRight="5dip" 
+                android:layout_marginBottom="5dip" 
+                android:text="         我们团队设计的二维码地铁票系统作为当今市面上唯一的电子单程票系统,能够有效减少地铁站硬件维护费用,增加乘客在站点的流通性,并且通过结合各种旅游地图,为广大游客及外来商务人士提供了极大的便利,且购票方式方便简易,只要有如支付宝、微信支付等便能完成操作。具体操作流程如下图所示:"/>
+            <ImageView
+        	    android:layout_width="wrap_content"
+        	    android:layout_height="wrap_content"
+        	    android:layout_gravity="center_horizontal"
+        	    android:src="@drawable/help" />
+        </LinearLayout>
+        
+    </LinearLayout>
+    <LinearLayout android:gravity="bottom" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:layout_gravity="center" android:layout_alignParentBottom="true" android:textSize="11.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="华软交通杯. 诚意出品."/>
+       	<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_alignParentBottom="true"
+            android:text="Copyright © 2014 MetroGO"
+            android:textSize="11.0sp" />
+    </LinearLayout>
+</LinearLayout>

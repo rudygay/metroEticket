@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.huaruan.metroeticket"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="21" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar" >
+        <activity
+            android:name=".StartActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.huaruan.metroeticket.MapActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:name="com.huaruan.metroeticket.ErweimaActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:name="com.huaruan.metroeticket.MoreActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:name="com.huaruan.metroeticket.BuyActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:name="com.huaruan.metroeticket.ZhifubaoDialog" android:theme="@style/MyDialogStyle" />
+        <activity android:name="com.huaruan.metroeticket.WeixinDialog" android:theme="@style/MyDialogStyle" />
+        <activity android:name="com.huaruan.metroeticket.ShowActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:name="com.huaruan.metroeticket.About" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:name="com.huaruan.metroeticket.Help" android:theme="@android:style/Theme.NoTitleBar"/>
+    </application>
+
+</manifest>

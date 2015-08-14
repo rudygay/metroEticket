@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/er_back">
+    <RelativeLayout android:layout_width="match_parent"
+	    android:layout_height="50dp"
+	    android:background="@drawable/map_top_bg"
+	    android:id="@+id/erweima_top">
+	    <Button
+            android:id="@+id/btn_back"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="返回"
+            android:textSize="14sp"
+            android:textColor="#fff"
+            android:onClick="er_back"
+            android:background="@drawable/title_btn_back"/>
+	    <TextView android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="我的电子票"
+	        android:textColor="#fff"
+	        android:layout_centerInParent="true"
+	        android:textSize="20sp"/>
+	</RelativeLayout>
+	<ListView android:layout_height="wrap_content"
+	    android:layout_width="match_parent"
+	    android:id="@+id/erweimaList"
+	    android:layout_below="@id/erweima_top"
+	    android:divider="@drawable/divider"/>
+	<ImageView android:layout_height="wrap_content"
+		    android:layout_width="match_parent"
+		    android:layout_below="@id/erweimaList"
+		    android:src="@drawable/divider"/>
+</RelativeLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/zhifu_layout"
+        android:layout_width="340dp"
+        android:layout_height="280dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:background="@drawable/confirm_dialog_bg2" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textColor="#333"
+            android:textSize="17sp"
+            android:text="支付宝支付密码"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/titletxt"/>
+		<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textColor="#666"
+            android:textSize="12sp"
+            android:text="183****4932"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/numbertxt"
+            android:layout_below="@id/titletxt"/>
+		<ImageView android:layout_width="328dp"
+	        android:layout_height="wrap_content"
+	        android:src="@drawable/b_divider"
+	        android:id="@+id/divider0"
+	        android:layout_below="@id/numbertxt"/>
+		<TextView android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="36.2元"
+		    android:textColor="#111"
+		    android:textSize="17sp"
+		    android:padding="10dp"
+		    android:layout_below="@id/divider0"
+		    android:id="@+id/jiage"/>
+		<ImageView android:layout_width="328dp"
+	        android:layout_height="wrap_content"
+	        android:src="@drawable/b_divider"
+	        android:id="@+id/divider1"
+	        android:layout_below="@id/jiage"/>
+		<TextView android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="中国银行储蓄卡（尾号4431）付款"
+		    android:textColor="#111"
+		    android:textSize="17sp"
+		    android:padding="10dp"
+		    android:layout_below="@id/divider1"
+		    android:id="@+id/yinhangka"/>
+		<ImageView android:layout_width="328dp"
+	        android:layout_height="wrap_content"
+	        android:src="@drawable/b_divider"
+	        android:id="@+id/divider2"
+	        android:layout_below="@id/yinhangka"/>
+		<RelativeLayout android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_below="@id/divider2"
+		    android:background="@drawable/zhifubao_pass_bg"
+		    android:layout_marginLeft="10dp"
+		    android:layout_marginRight="10dp"
+		    android:layout_marginTop="5dp">
+		    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textColor="#111"
+            android:textSize="17sp"
+            android:text="付款密码"
+            android:id="@+id/fukuantxt"/>
+		    <EditText android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:background="#0000"
+		        android:inputType="textPassword"
+		        android:textColor="#000"
+		        android:id="@+id/mima"		        
+		        android:layout_toRightOf="@id/fukuantxt"
+		        android:layout_centerVertical="true"/>
+		</RelativeLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"           
+            android:layout_marginTop="33dp"
+            android:padding="8dp"
+            android:layout_alignParentBottom="true">
+            
+            <Button
+              android:id="@+id/cancel"
+              android:layout_width="150dp"
+              android:layout_height="wrap_content"
+              android:text="取消"
+              android:textSize="16sp"
+              android:textColor="#333"            
+              android:background="@drawable/btn_style_white"
+              android:gravity="center"
+			  android:onClick="cancle"
+              />
+            
+            <Button
+              android:id="@+id/sure"
+              android:layout_width="150dp"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="10dp"
+              android:text="付款"
+              android:textSize="16sp"
+              android:textColor="#333"
+              android:background="@drawable/btn_style_green"
+              android:gravity="center"
+			  android:onClick="sure"
+              />
+        </LinearLayout>
+
+    </RelativeLayout>

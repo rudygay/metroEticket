@@ -1,0 +1,361 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,maximum-scale=1,minimum-scale=0.3,initial-scale=0.5,user-scalable=yes" />
+    <title>二维码地铁票</title>
+    <script src="jquery-1.8.1.js" type="text/javascript"></script>
+    <style type="text/css">
+        *
+        {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .ss
+        {
+			position: absolute;
+			overflow: visible;
+			visibility: visible;
+        }
+        div
+        {
+            background-repeat: no-repeat;
+        }
+        .item1
+        {
+			float:left;
+            background: url(image/route1.png) no-repeat;
+            width: 62px;
+            height: 78px;
+            text-align: center;
+            margin: 0 auto;
+            line-height: 90px;
+            margin-top: 10px;
+            color: black;
+            font-weight: bold;
+            font-size: 10px;
+        }
+		.item2	   
+        {   
+			float:left;
+            background: url(image/route2.png) no-repeat;
+            width: 80px;
+            height: 78px;
+            text-align: center;
+            margin: 0 auto;
+            line-height: 90px;
+            margin-top: 10px;
+            color: black;
+            font-weight: bold;
+            font-size: 10px;
+        }
+		.item3 
+        {
+			float:left;
+            background: url(image/route3.png) no-repeat;
+            width: 62px;
+            height: 78px;
+            text-align: center;
+            margin: 0 auto;
+            line-height: 90px;
+            margin-top: 10px;
+            color: black;
+            font-weight: bold;
+            font-size: 10px;
+        }	
+    </style>
+</head>
+<body>
+<div id="divBg" style="width:1800px;height:1500px;background-image:url(image/pic_03.png);background-position:center;"> </div>
+
+<div class="ss" id="p101327" onclick="selectStation(101327,'广州东站')" style="width: 25px; height: 25px; top: 646px; left: 926px"></div>
+<div class="ss" id="p102" onclick="selectStation(102,'体育中心')" style="width: 25px; height: 25px; top: 695px; left: 1100px"></div>
+<div class="ss" id="p103306" onclick="selectStation(103306,'体育西路')" style="width: 25px; height: 25px; top: 824px; left: 926px"></div>
+<div class="ss" id="p104511" onclick="selectStation(104511,'杨箕')" style="width: 25px; height: 25px; top: 825px; left: 857px"></div>
+<div class="ss" id="p105613" onclick="selectStation(105613,'东山口')" style="width: 25px; height: 25px; top: 824px; left: 798px"></div>
+<div class="ss" id="p106" onclick="selectStation(106,'烈士陵园')" style="width: 25px; height: 25px; top: 824px; left: 736px"></div>
+<div class="ss" id="p107" onclick="selectStation(107,'农讲所')" style="width: 25px; height: 25px; top: 824px; left: 687px"></div>
+<div class="ss" id="p108212" onclick="selectStation(108212,'公园前')" style="width: 25px; height: 25px; top: 824px; left: 627px"></div>
+<div class="ss" id="p109" onclick="selectStation(109,'西门口')" style="width: 25px; height: 25px; top: 824px; left: 533px"></div>
+<div class="ss" id="p110" onclick="selectStation(110,'陈家祠')" style="width: 25px; height: 25px; top: 824px; left: 469px"></div>
+<div class="ss" id="p111" onclick="selectStation(111,'长寿路')" style="width: 25px; height: 25px; top: 841px; left: 420px"></div>
+<div class="ss" id="p112607" onclick="selectStation(112607,'黄沙')" style="width: 25px; height: 25px; top: 886px; left: 420px"></div>
+<div class="ss" id="p113" onclick="selectStation(113,'芳村')" style="width: 25px; height: 25px; top: 941px; left: 420px"></div>
+<div class="ss" id="p114" onclick="selectStation(114,'花地湾')" style="width: 25px; height: 25px; top: 997px; left: 420px"></div>
+<div class="ss" id="p115" onclick="selectStation(115,'坑口')" style="width: 25px; height: 25px; top: 1052px; left: 420px"></div>
+<div class="ss" id="p116914" onclick="selectStation(116914,'西朗')" style="width: 25px; height: 25px; top: 1107px; left: 420px"></div>
+
+<div class="ss" id="p1001" onclick="selectStation(1001,'林和西')" style="width: 25px; height: 25px; top: 682px; left: 984px"></div>
+<div class="ss" id="p1002" onclick="selectStation(1002,'体育中心南')" style="width: 25px; height: 25px; top: 715px; left: 984px"></div>
+<div class="ss" id="p1003" onclick="selectStation(1003,'天河南')" style="width: 25px; height: 25px; top: 746px; left: 984px"></div>
+<div class="ss" id="p1004" onclick="selectStation(1004,'黄埔大道')" style="width: 25px; height: 25px; top: 779px; left: 984px"></div>
+<div class="ss" id="p1005" onclick="selectStation(1005,'妇儿中心')" style="width: 25px; height: 25px; top: 807px; left: 984px"></div>
+<div class="ss" id="p1006" onclick="selectStation(1006,'花城大道')" style="width: 25px; height: 25px; top: 851px; left: 984px"></div>
+<div class="ss" id="p1007" onclick="selectStation(1007,'大剧院')" style="width: 25px; height: 25px; top: 882px; left: 984px"></div>
+<div class="ss" id="p1008" onclick="selectStation(1008,'海心沙')" style="width: 25px; height: 25px; top: 912px; left: 984px"></div>
+<div class="ss" id="p1009" onclick="selectStation(1009,'广州塔')" style="width: 25px; height: 25px; top: 989px; left: 984px"></div>
+
+<div class="ss" id="p201320" onclick="selectStation(201320,'嘉禾望岗')" style="width: 25px; height: 25px; top: 338px; left: 780px"></div>
+<div class="ss" id="p202" onclick="selectStation(202,'黄边')" style="width: 25px; height: 25px; top: 372px; left: 760px"></div>
+<div class="ss" id="p203" onclick="selectStation(203,'江夏')" style="width: 25px; height: 25px; top: 409px; left: 734px"></div>
+<div class="ss" id="p204" onclick="selectStation(204,'萧岗')" style="width: 25px; height: 25px; top: 444px; left: 708px"></div>
+<div class="ss" id="p205" onclick="selectStation(205,'白云文化广场')" style="width: 25px; height: 25px; top: 481px; left: 682px"></div>
+<div class="ss" id="p206" onclick="selectStation(206,'白云公园')" style="width: 25px; height: 25px; top: 518px; left: 654px"></div>
+<div class="ss" id="p207" onclick="selectStation(207,'飞翔公园')" style="width: 25px; height: 25px; top: 559px; left: 627px"></div>
+<div class="ss" id="p208" onclick="selectStation(208,'三元里')" style="width: 25px; height: 25px; top: 614px; left: 627px"></div>
+<div class="ss" id="p209506" onclick="selectStation(209506,'广州火车站')" style="width: 25px; height: 25px; top: 675px; left: 627px"></div>
+<div class="ss" id="p210" onclick="selectStation(210,'越秀公园')" style="width: 25px; height: 25px; top: 726px; left: 627px"></div>
+<div class="ss" id="p211" onclick="selectStation(211,'纪念堂')" style="width: 25px; height: 25px; top: 775px; left: 627px"></div>
+<div class="ss" id="p213609" onclick="selectStation(213609,'海珠广场')" style="width: 25px; height: 25px; top: 887px; left: 627px"></div>
+<div class="ss" id="p214" onclick="selectStation(214,'市二宫')" style="width: 25px; height: 25px; top: 938px; left: 627px"></div>
+<div class="ss" id="p215" onclick="selectStation(215,'江南西')" style="width: 25px; height: 25px; top: 987px; left: 627px"></div>
+<div class="ss" id="p216804" onclick="selectStation(216804,'昌岗')" style="width: 25px; height: 25px; top: 1050px; left: 627px"></div>
+<div class="ss" id="p217" onclick="selectStation(217,'江泰路')" style="width: 25px; height: 25px; top: 1094px; left: 627px"></div>
+<div class="ss" id="p218" onclick="selectStation(218,'东晓南')" style="width: 25px; height: 25px; top: 1139px; left: 627px"></div>
+<div class="ss" id="p219" onclick="selectStation(219,'南洲')" style="width: 25px; height: 25px; top: 1183px; left: 627px"></div>
+<div class="ss" id="p220" onclick="selectStation(220,'洛溪')" style="width: 25px; height: 25px; top: 1226px; left: 627px"></div>
+<div class="ss" id="p221" onclick="selectStation(221,'南浦')" style="width: 25px; height: 25px; top: 1271px; left: 627px"></div>
+<div class="ss" id="p222" onclick="selectStation(222,'会江')" style="width: 25px; height: 25px; top: 1315px; left: 627px"></div>
+<div class="ss" id="p223" onclick="selectStation(223,'石壁')" style="width: 25px; height: 25px; top: 1359px; left: 627px"></div>
+<div class="ss" id="p224" onclick="selectStation(224,'广州南站')" style="width: 25px; height: 25px; top: 1403px; left: 627px"></div>
+
+<div class="ss" id="p301619" onclick="selectStation(301619,'天河客运站')" style="width: 25px; height: 25px; top: 578px; left: 1195px"></div>
+<div class="ss" id="p302" onclick="selectStation(302,'五山')" style="width: 25px; height: 25px; top: 689px; left: 1195px"></div>
+<div class="ss" id="p303" onclick="selectStation(303,'华师')" style="width: 25px; height: 25px; top: 745px; left: 1195px"></div>
+<div class="ss" id="p304" onclick="selectStation(304,'岗顶')" style="width: 25px; height: 25px; top: 805px; left: 1195px"></div>
+<div class="ss" id="p305" onclick="selectStation(305,'石牌桥')" style="width: 25px; height: 25px; top: 825px; left: 1115px"></div>
+<div class="ss" id="p307513" onclick="selectStation(307513,'珠江新城')" style="width: 25px; height: 25px; top: 940px; left: 926px"></div>
+<div class="ss" id="p308" onclick="selectStation(308,'广州塔')" style="width: 25px; height: 25px; top: 989px; left: 926px"></div>
+<div class="ss" id="p309808" onclick="selectStation(309808,'客村')" style="width: 25px; height: 25px; top: 1049px; left: 926px"></div>
+<div class="ss" id="p310" onclick="selectStation(310,'大塘')" style="width: 25px; height: 25px; top: 1091px; left: 926px"></div>
+<div class="ss" id="p311" onclick="selectStation(311,'沥滘')" style="width: 25px; height: 25px; top: 1135px; left: 926px"></div>
+<div class="ss" id="p312" onclick="selectStation(312,'厦滘')" style="width: 25px; height: 25px; top: 1179px; left: 926px"></div>
+<div class="ss" id="p313" onclick="selectStation(313,'大石')" style="width: 25px; height: 25px; top: 1224px; left: 926px"></div>
+<div class="ss" id="p314" onclick="selectStation(314,'汉溪长隆')" style="width: 25px; height: 25px; top: 1270px; left: 926px"></div>
+<div class="ss" id="p315" onclick="selectStation(315,'市桥')" style="width: 25px; height: 25px; top: 1270px; left: 975px"></div>
+<div class="ss" id="p316" onclick="selectStation(316,'番禺广场')" style="width: 25px; height: 25px; top: 1270px; left: 1056px"></div>
+<div class="ss" id="p317" onclick="selectStation(317,'机场南')" style="width: 25px; height: 25px; top: 163px; left: 780px"></div>
+<div class="ss" id="p318" onclick="selectStation(318,'人和')" style="width: 25px; height: 25px; top: 221px; left: 780px"></div>
+<div class="ss" id="p319" onclick="selectStation(319,'龙归')" style="width: 25px; height: 25px; top: 279px; left: 780px"></div>
+<div class="ss" id="p321" onclick="selectStation(321,'白云大道北')" style="width: 25px; height: 25px; top: 386px; left: 809px"></div>
+<div class="ss" id="p322" onclick="selectStation(322,'永泰')" style="width: 25px; height: 25px; top: 416px; left: 829px"></div>
+<div class="ss" id="p323" onclick="selectStation(323,'同和')" style="width: 25px; height: 25px; top: 447px; left: 852px"></div>
+<div class="ss" id="p324" onclick="selectStation(324,'京溪南方医院')" style="width: 25px; height: 25px; top: 482px; left: 879px"></div>
+<div class="ss" id="p325" onclick="selectStation(325,'梅花园')" style="width: 25px; height: 25px; top: 517px; left: 903px"></div>
+<div class="ss" id="p326618" onclick="selectStation(326618,'燕塘')" style="width: 25px; height: 25px; top: 578px; left: 926px"></div>
+<div class="ss" id="p328" onclick="selectStation(328,'林和西')" style="width: 25px; height: 25px; top: 682px; left: 926px"></div>
+
+<div class="ss" id="p401" onclick="selectStation(401,'黄村')" style="width: 25px; height: 25px; top: 863px; left: 1384px"></div>
+<div class="ss" id="p402" onclick="selectStation(402,'车陂')" style="width: 25px; height: 25px; top: 897px; left: 1346px"></div>
+<div class="ss" id="p403518" onclick="selectStation(403518,'车陂南')" style="width: 25px; height: 25px; top: 942px; left: 1293px"></div>
+<div class="ss" id="p404813" onclick="selectStation(404813,'万胜围')" style="width: 25px; height: 25px; top: 1050px; left: 1293px"></div>
+<div class="ss" id="p405" onclick="selectStation(405,'官洲')" style="width: 25px; height: 25px; top: 1090px; left: 1293px"></div>
+<div class="ss" id="p406" onclick="selectStation(406,'大学城北')" style="width: 25px; height: 25px; top: 1123px; left: 1293px"></div>
+<div class="ss" id="p407" onclick="selectStation(407,'大学城南')" style="width: 25px; height: 25px; top: 1156px; left: 1293px"></div>
+<div class="ss" id="p408" onclick="selectStation(408,'新造')" style="width: 25px; height: 25px; top: 1189px; left: 1293px"></div>
+<div class="ss" id="p409" onclick="selectStation(409,'石基')" style="width: 25px; height: 25px; top: 1255px; left: 1293px"></div>
+<div class="ss" id="p410" onclick="selectStation(410,'海傍')" style="width: 25px; height: 25px; top: 1289px; left: 1293px"></div>
+<div class="ss" id="p411" onclick="selectStation(411,'低涌')" style="width: 25px; height: 25px; top: 1322px; left: 1293px"></div>
+<div class="ss" id="p412" onclick="selectStation(412,'东涌')" style="width: 25px; height: 25px; top: 1355px; left: 1293px"></div>
+<div class="ss" id="p413" onclick="selectStation(413,'黄阁汽车城')" style="width: 25px; height: 25px; top: 1384px; left: 1319px"></div>
+<div class="ss" id="p414" onclick="selectStation(414,'黄阁')" style="width: 25px; height: 25px; top: 1384px; left: 1396px"></div>
+<div class="ss" id="p415" onclick="selectStation(415,'蕉门')" style="width: 25px; height: 25px; top: 1384px; left: 1454px"></div>
+<div class="ss" id="p416" onclick="selectStation(416,'金洲')" style="width: 25px; height: 25px; top: 1384px; left: 1519px"></div>
+
+<div class="ss" id="p501" onclick="selectStation(501,'滘口')" style="width: 25px; height: 25px; top: 817px; left: 234px"></div>
+<div class="ss" id="p502605" onclick="selectStation(502605,'坦尾')" style="width: 25px; height: 25px; top: 783px; left: 290px"></div>
+<div class="ss" id="p503" onclick="selectStation(503,'中山八')" style="width: 25px; height: 25px; top: 750px; left: 346px"></div>
+<div class="ss" id="p504" onclick="selectStation(504,'西场')" style="width: 25px; height: 25px; top: 716px; left: 403px"></div>
+<div class="ss" id="p505" onclick="selectStation(505,'西村')" style="width: 25px; height: 25px; top: 676px; left: 470px"></div>
+<div class="ss" id="p507" onclick="selectStation(507,'小北')" style="width: 25px; height: 25px; top: 676px; left: 694px"></div>
+<div class="ss" id="p508" onclick="selectStation(508,'淘金')" style="width: 25px; height: 25px; top: 676px; left: 742px"></div>
+<div class="ss" id="p509614" onclick="selectStation(509614,'区庄')" style="width: 25px; height: 25px; top: 674px; left: 797px"></div>
+<div class="ss" id="p510" onclick="selectStation(510,'动物园')" style="width: 25px; height: 25px; top: 746px; left: 856px"></div>
+<div class="ss" id="p512" onclick="selectStation(512,'五羊邨')" style="width: 25px; height: 25px; top: 942px; left: 856px"></div>
+<div class="ss" id="p514" onclick="selectStation(514,'猎德')" style="width: 25px; height: 25px; top: 942px; left: 1062px"></div>
+<div class="ss" id="p515" onclick="selectStation(515,'潭村')" style="width: 25px; height: 25px; top: 942px; left: 1113px"></div>
+<div class="ss" id="p516" onclick="selectStation(516,'员村')" style="width: 25px; height: 25px; top: 942px; left: 1164px"></div>
+<div class="ss" id="p517" onclick="selectStation(517,'科韵路')" style="width: 25px; height: 25px; top: 942px; left: 1222px"></div>
+<div class="ss" id="p519" onclick="selectStation(519,'东圃')" style="width: 25px; height: 25px; top: 942px; left: 1359px"></div>
+<div class="ss" id="p520" onclick="selectStation(520,'三溪')" style="width: 25px; height: 25px; top: 942px; left: 1417px"></div>
+<div class="ss" id="p521" onclick="selectStation(521,'鱼珠')" style="width: 25px; height: 25px; top: 942px; left: 1488px"></div>
+<div class="ss" id="p522" onclick="selectStation(522,'大沙地')" style="width: 25px; height: 25px; top: 942px; left: 1557px"></div>
+<div class="ss" id="p523" onclick="selectStation(523,'大沙东')" style="width: 25px; height: 25px; top: 942px; left: 1627px"></div>
+<div class="ss" id="p524" onclick="selectStation(524,'文冲')" style="width: 25px; height: 25px; top: 942px; left: 1692px"></div>
+
+<div class="ss" id="p601" onclick="selectStation(601,'浔峰岗')" style="width: 25px; height: 25px; top: 521px; left: 234px"></div>
+<div class="ss" id="p602" onclick="selectStation(602,'横沙')" style="width: 25px; height: 25px; top: 589px; left: 234px"></div>
+<div class="ss" id="p603" onclick="selectStation(603,'沙贝')" style="width: 25px; height: 25px; top: 654px; left: 234px"></div>
+<div class="ss" id="p604" onclick="selectStation(604,'河沙')" style="width: 25px; height: 25px; top: 729px; left: 234px"></div>
+<div class="ss" id="p606" onclick="selectStation(606,'如意坊')" style="width: 25px; height: 25px; top: 829px; left: 335px"></div>
+<div class="ss" id="p608" onclick="selectStation(608,'文化公园')" style="width: 25px; height: 25px; top: 886px; left: 484px"></div>
+<div class="ss" id="p610" onclick="selectStation(610,'北京路')" style="width: 25px; height: 25px; top: 886px; left: 685px"></div>
+<div class="ss" id="p611" onclick="selectStation(611,'团一大广场')" style="width: 25px; height: 25px; top: 886px; left: 739px"></div>
+<div class="ss" id="p612" onclick="selectStation(612,'东湖')" style="width: 25px; height: 25px; top: 886px; left: 796px"></div>
+<div class="ss" id="p615" onclick="selectStation(615,'黄花岗')" style="width: 25px; height: 25px; top: 628px; left: 797px"></div>
+<div class="ss" id="p616" onclick="selectStation(616,'沙河顶')" style="width: 25px; height: 25px; top: 591px; left: 797px"></div>
+<div class="ss" id="p617" onclick="selectStation(617,'天平架')" style="width: 25px; height: 25px; top: 579px; left: 872px"></div>
+<div class="ss" id="p620" onclick="selectStation(620,'长湴站')" style="width: 25px; height: 25px; top: 578px; left: 1315px"></div>
+
+<div class="ss" id="p801" onclick="selectStation(801,'凤凰新村')" style="width: 25px; height: 25px; top: 963px; left: 501px"></div>
+<div class="ss" id="p802" onclick="selectStation(802,'沙园')" style="width: 25px; height: 25px; top: 1007px; left: 536px"></div>
+<div class="ss" id="p803" onclick="selectStation(803,'宝岗大道')" style="width: 25px; height: 25px; top: 1049px; left: 568px"></div>
+<div class="ss" id="p805" onclick="selectStation(805,'晓港')" style="width: 25px; height: 25px; top: 1049px; left: 721px"></div>
+<div class="ss" id="p806" onclick="selectStation(806,'中大')" style="width: 25px; height: 25px; top: 1049px; left: 780px"></div>
+<div class="ss" id="p807" onclick="selectStation(807,'鹭江')" style="width: 25px; height: 25px; top: 1049px; left: 836px"></div>
+<div class="ss" id="p809" onclick="selectStation(809,'赤岗')" style="width: 25px; height: 25px; top: 1049px; left: 993px"></div>
+<div class="ss" id="p810" onclick="selectStation(810,'磨碟沙')" style="width: 25px; height: 25px; top: 1049px; left: 1062px"></div>
+<div class="ss" id="p811" onclick="selectStation(811,'新港东')" style="width: 25px; height: 25px; top: 1049px; left: 1129px"></div>
+<div class="ss" id="p812" onclick="selectStation(812,'琶洲')" style="width: 25px; height: 25px; top: 1049px; left: 1196px"></div>
+
+<div class="ss" id="p901" onclick="selectStation(901,'魁奇路')" style="width: 25px; height: 25px; top: 1378px; left: 84px"></div>
+<div class="ss" id="p902" onclick="selectStation(902,'季华园')" style="width: 25px; height: 25px; top: 1323px; left: 84px"></div>
+<div class="ss" id="p903" onclick="selectStation(903,'同济路')" style="width: 25px; height: 25px; top: 1277px; left: 84px"></div>
+<div class="ss" id="p904" onclick="selectStation(904,'祖庙')" style="width: 25px; height: 25px; top: 1233px; left: 84px"></div>
+<div class="ss" id="p905" onclick="selectStation(905,'普君北路')" style="width: 25px; height: 25px; top: 1233px; left: 127px"></div>
+<div class="ss" id="p906" onclick="selectStation(906,'朝安')" style="width: 25px; height: 25px; top: 1233px; left: 183px"></div>
+<div class="ss" id="p907" onclick="selectStation(907,'桂城')" style="width: 25px; height: 25px; top: 1233px; left: 230px"></div>
+<div class="ss" id="p908" onclick="selectStation(908,'南桂路')" style="width: 25px; height: 25px; top: 1233px; left: 268px"></div>
+<div class="ss" id="p909" onclick="selectStation(909,'蠕岗')" style="width: 25px; height: 25px; top: 1181px; left: 268px"></div>
+<div class="ss" id="p910" onclick="selectStation(910,'千灯湖')" style="width: 25px; height: 25px; top: 1141px; left: 268px"></div>
+<div class="ss" id="p911" onclick="selectStation(911,'金融高新区')" style="width: 25px; height: 25px; top: 1107px; left: 268px"></div>
+<div class="ss" id="p912" onclick="selectStation(912,'龙溪')" style="width: 25px; height: 25px; top: 1107px; left: 308px"></div>
+<div class="ss" id="p913" onclick="selectStation(913,'菊树')" style="width: 25px; height: 25px; top: 1107px; left: 359px"></div>
+
+<p>&nbsp;</p>
+<div class="ss"  style="top:0;left:0;width:10px;height:10px" id="showStation"></div>
+<div class="ss"  style="top:0;left:0;width:10px;height:10px" id="showFromStation"></div>
+<div class="ss"  style="top:0;left:0;width:10px;height:10px" id="showToStation"></div>
+<div class="ss"  style="top:0;left:0;width:100px;height:100px" id="showMenu"></div>
+
+<script type="text/javascript">
+	var dheight = $(document.body).height();
+    var dwidth = $(document.body).width();
+    scrollTo(250, dheight/2-250);		//滚动条
+    var isShowMenu = false;
+
+    function selectStation(sid,sname){
+        var div = $('#p'+sid);
+        var top=div.offset().top;
+        var left=div.offset().left;
+		
+        var menuHtml1='<div class="ss" style="left: '+(left-88)+'px; width:204px; top:'+(top-75)+'px; height:78px;"><div class="item1" onclick="setFromStation('+sid+',\''+sname+'\')">设为起点</div><div class="item2" onclick="clearMenu()">重置</div><div class="item3" onclick="setToStation('+sid+',\''+sname+'\')">设为终点</div></div>';
+
+        var sm =  $('#showMenu');
+        sm.html(menuHtml1);
+        isShowMenu=true;
+        }
+
+        function clearMenu() {
+            var ss = $('#showMenu');
+            ss.html('');
+			var ss = $('#showStation');
+            ss.html('');
+            var sss = $('#showToStation');
+            sss.html('');
+            var ssss = $('#showFromStation');
+            ssss.html('');
+			console.log("3 "+"null");
+        }
+
+        function setToStation(sid,sname) {
+            var div = $('#p' + sid);
+            tName = div.html();
+            var top = div.offset().top;
+            var left = div.offset().left;
+            $('#showMenu').html("")
+            var ss = $('#showToStation');
+            var toSHtml = '<img alt="" class="ss" src="image/img_end.png" style="width:41px; height:49px; top:'+(top-35)+'px; left:'+(left-20.5+15)+'px\"/>';
+            ss.html(toSHtml);
+            console.log("0 "+sname);
+        }
+
+        function setFromStation(sid,sname) {
+            var div = $('#p' + sid);
+            var top = div.offset().top;
+            var left = div.offset().left;
+            $('#showMenu').html("")
+            var ss = $('#showFromStation');
+            var fromSHtml = '<img alt="" class="ss" src="image/img_start.png" style="width:41px; height:49px; top:'+(top-35)+'px; left:'+(left-20.5+15)+'px\"/>';
+            ss.html(fromSHtml);
+			console.log("1 "+sname);
+        }
+
+        function lineQuery() {
+            index.metroLineQuery();
+        }
+
+        function showStationRoute(ids) {
+            //ids='407,406,405,404,403,1227,1226';
+            fId = '';
+            tId = '';
+            fName = '';
+            tName = '';
+            clearMenu();
+            var sss = ids.split(",");
+            for (var i = 0; i < sss.length; i++) {
+                if (sss[i] == '') {
+                    continue;
+                }
+                var div = $('#p' + sss[i]);
+                if (div == undefined || div.offset() == undefined) {
+                    continue;
+                }
+                var top = div.offset().top;
+                var left = div.offset().left;
+                var html = '';
+                var ss = $('#showStation');
+                html = '<img alt="" class="ss"  src="image/img_route.png" style="width: 36px; height: 36px;top:' + (top) + 'px;left:' + (left - 1) + 'px\"/>';
+                ss.append(html);
+
+                if (i == 0) {
+                    setFromStation(sss[i]);
+                }
+                if (i == sss.length - 2) {
+                    setToStation(sss[i]);
+                }
+            }
+        }
+
+       /*
+	    function displayStation() {
+            var ss = document.getElementById("showStation");
+            ss.innerHTML = "";
+            if (ssurl.indexOf("#") > -1) {
+                var bk = ssurl.substring(ssurl.indexOf("#") + 1);
+                var sss = bk.split(",");
+                for (var i = 0; i < sss.length; i++) {
+                    var bkint = parseInt(sss[i]);
+                    for (var j = 0; j < ids.length; j++) {
+                        if (Math.abs(bkint) == ids[j]) {
+                            if (i == 0) {
+                                ss.innerHTML += "<img alt=\"\" class=\"ss\" src=\"sorig.png\" style=\"width:20px;top:" + (sys[j] - 10) + "px;left:" + (sxs[j] - 10) + "px\"/>";
+                                soriid = ids[j];
+                            }
+                            else if (i == sss.length - 1) {
+                                ss.innerHTML += "<img alt=\"\" class=\"ss\" src=\"sdest.png\" style=\"width:20px;top:" + (sys[j] - 10) + "px;left:" + (sxs[j] - 10) + "px\"/>";
+                                sdesid = ids[j];
+                            }
+                            else if (bkint < 0)
+                                ss.innerHTML += "<img alt=\"\" class=\"ss\" src=\"sintc.png\" style=\"width:20px;top:" + (sys[j] - 10) + "px;left:" + (sxs[j] - 10) + "px\"/>";
+                            else
+                                ss.innerHTML += "<img alt=\"\" class=\"ss\" src=\"sstat.png\" style=\"width:16px;top:" + (sys[j] - 8) + "px;left:" + (sxs[j] - 8) + "px\"/>";
+                            //break;
+                        }
+                    }
+                }
+            }
+        }
+		*/
+        $(document).click(function (e) {
+            var t = e.srcElement || e.target;
+
+            if (isShowMenu == true && t.id == 'divBg') {
+                clearMenu();
+                isShowMenu = false;
+            }
+
+        }) 
+    </script>
+</body>
+</html>

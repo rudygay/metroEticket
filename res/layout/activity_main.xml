@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"   
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<RelativeLayout android:layout_width="match_parent"
+	    android:layout_height="50dp"
+	    android:background="@drawable/map_top_bg"
+	    android:id="@+id/map_top">
+	    <TextView android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="广州地铁"
+	        android:textColor="#fff"
+	        android:layout_centerInParent="true"
+	        android:textSize="20sp"/>
+	    <Button android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:background="@drawable/bt_erweima"
+	        android:layout_alignParentLeft="true"
+	        android:layout_marginLeft="10dp"
+	        android:onClick="erweima"
+	        android:layout_centerVertical="true"/>
+	    <Button android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:background="@drawable/bt_more"
+	        android:layout_alignParentRight="true"
+	        android:layout_marginRight="10dp"
+	        android:onClick="more"
+	        android:layout_centerVertical="true"/>
+	</RelativeLayout>
+	<WebView android:layout_below="@id/map_top"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:id="@+id/webview"/> 
+	<RelativeLayout android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/map_top"
+	    android:clickable="true"
+	    android:onClick="buy"
+	    android:id="@+id/show_lay"
+	    android:visibility="invisible"
+	    android:background="@drawable/btn_item"> 
+	 <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"        	     	
+        android:scaleType="matrix"
+        android:id="@+id/result_id"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/mm_submenu"
+        android:paddingLeft="18dp"
+        android:paddingRight="10dp"/>
+	 <TextView android:layout_width="match_parent"
+	     android:layout_height="wrap_content"
+	     android:id="@+id/leadTxt"
+	     android:layout_toLeftOf="@id/result_id"
+	     android:textColor="#333"
+	     
+	     android:textSize="17sp"/>
+	    
+	</RelativeLayout>      
+
+</RelativeLayout>
